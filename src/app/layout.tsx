@@ -26,6 +26,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="pt-br">
+            <head>
+                <link
+                    rel="shortcut icon"
+                    href="https://cdn-icons-png.flaticon.com/512/8899/8899687.png"
+                    type="image/x-icon"
+                />
+            </head>
             <body
                 className={cn(
                     'min-h-screen bg-background font-sans antialiased',

@@ -9,7 +9,13 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '../ui/button'
-import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet'
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetTitle,
+    SheetTrigger,
+} from '../ui/sheet'
 import {
     Tooltip,
     TooltipContent,
@@ -116,7 +122,7 @@ export function Sidebar() {
                                     href="#"
                                     className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground"
                                 >
-                                    <LogOut className="h-5 w-5 text-red-500" />
+                                    <LogOut className="h-5 w-5 text-red-500 hover:text-red-600" />
                                     <span className="sr-only">Sair</span>
                                 </Link>
                             </TooltipTrigger>
@@ -142,64 +148,86 @@ export function Sidebar() {
                             </Button>
                         </SheetTrigger>
 
-                        <SheetContent side="left" className="sm:max-w-xs">
-                            <nav className="grid gap-6 text-lg font-medium">
-                                <Link
-                                    href="#"
-                                    className="texnt-lg flex h-10 w-10 items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground md:text-base"
-                                    prefetch={false}
-                                >
-                                    <Package className="h-5 w-5 transition-all" />
-                                    <span className="sr-only">
-                                        Logo do projeto
-                                    </span>
-                                </Link>
+                        <SheetTitle>Dashboard Simple</SheetTitle>
 
-                                <Link
-                                    href="#"
-                                    className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
-                                    prefetch={false}
-                                >
-                                    <Home className="h-5 w-5" />
-                                    Início
-                                </Link>
+                        <SheetDescription>
+                            <span className="sr-only">Menu de opções</span>
+                        </SheetDescription>
 
-                                <Link
-                                    href="#"
-                                    className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
-                                    prefetch={false}
-                                >
-                                    <ShoppingBag className="h-5 w-5" />
-                                    Pedidos
-                                </Link>
+                        <SheetContent
+                            side="left"
+                            className="sm:max-w-xs"
+                            aria-describedby="Menu com opções"
+                        >
+                            <div className="flex h-full flex-col">
+                                <nav className="grid gap-6 text-lg font-medium">
+                                    <Link
+                                        href="#"
+                                        className="texnt-lg flex h-10 w-10 items-center justify-center gap-2 rounded-full bg-primary text-primary-foreground md:text-base"
+                                        prefetch={false}
+                                    >
+                                        <Package className="h-5 w-5 transition-all" />
+                                        <span className="sr-only">
+                                            Logo do projeto
+                                        </span>
+                                    </Link>
 
-                                <Link
-                                    href="#"
-                                    className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
-                                    prefetch={false}
-                                >
-                                    <Package className="h-5 w-5" />
-                                    Produtos
-                                </Link>
+                                    <Link
+                                        href="#"
+                                        className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
+                                        prefetch={false}
+                                    >
+                                        <Home className="h-5 w-5" />
+                                        Início
+                                    </Link>
 
-                                <Link
-                                    href="#"
-                                    className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
-                                    prefetch={false}
-                                >
-                                    <Users className="h-5 w-5" />
-                                    Clientes
-                                </Link>
+                                    <Link
+                                        href="#"
+                                        className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
+                                        prefetch={false}
+                                    >
+                                        <ShoppingBag className="h-5 w-5" />
+                                        Pedidos
+                                    </Link>
 
-                                <Link
-                                    href="#"
-                                    className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
-                                    prefetch={false}
-                                >
-                                    <Settings2 className="h-5 w-5" />
-                                    Configurações
-                                </Link>
-                            </nav>
+                                    <Link
+                                        href="#"
+                                        className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
+                                        prefetch={false}
+                                    >
+                                        <Package className="h-5 w-5" />
+                                        Produtos
+                                    </Link>
+
+                                    <Link
+                                        href="#"
+                                        className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
+                                        prefetch={false}
+                                    >
+                                        <Users className="h-5 w-5" />
+                                        Clientes
+                                    </Link>
+
+                                    <Link
+                                        href="#"
+                                        className="flex items-center gap-4 px-2.5 text-muted-foreground transition-all hover:text-foreground"
+                                        prefetch={false}
+                                    >
+                                        <Settings2 className="h-5 w-5" />
+                                        Configurações
+                                    </Link>
+                                </nav>
+
+                                <nav className="mt-auto grid gap-6 text-lg font-medium">
+                                    <Link
+                                        href="#"
+                                        className="flex items-center gap-4 px-2.5 text-red-500 transition-all hover:text-red-600"
+                                    >
+                                        <LogOut />
+                                        Sair
+                                    </Link>
+                                </nav>
+                            </div>
                         </SheetContent>
                     </Sheet>
                     <h2>Menu</h2>

@@ -24,50 +24,27 @@ export function Sales() {
             </CardHeader>
 
             <CardContent>
-                <article className="flex items-center gap-2 border-b py-2">
-                    <Avatar className="h-8 w-8">
-                        <AvatarImage src="https://github.com/devfraga.png" />
-                        <AvatarFallback>DV</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="text-sm font-semibold sm:text-base">
-                            Sujeito Programador
-                        </p>
-                        <span className="text-[12px] text-gray-400 sm:text-sm">
-                            teste@teste.com
-                        </span>
-                    </div>
-                </article>
-
-                <article className="flex items-center gap-2 border-b py-2">
-                    <Avatar className="h-8 w-8">
-                        <AvatarImage src="https://github.com/devfraga.png" />
-                        <AvatarFallback>DV</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="text-sm font-semibold sm:text-base">
-                            Sujeito Programador
-                        </p>
-                        <span className="text-[12px] text-gray-400 sm:text-sm">
-                            teste@teste.com
-                        </span>
-                    </div>
-                </article>
-
-                <article className="flex items-center gap-2 border-b py-2">
-                    <Avatar className="h-8 w-8">
-                        <AvatarImage src="https://github.com/devfraga.png" />
-                        <AvatarFallback>DV</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="text-sm font-semibold sm:text-base">
-                            Sujeito Programador
-                        </p>
-                        <span className="text-[12px] text-gray-400 sm:text-sm">
-                            teste@teste.com
-                        </span>
-                    </div>
-                </article>
+                <div className="h-full max-h-[264px] overflow-auto">
+                    {Array.from({ length: 6 }).map((_, index) => (
+                        <article
+                            key={index}
+                            className="flex items-center gap-2 border-b py-2"
+                        >
+                            <Avatar className="h-8 w-8">
+                                <AvatarImage src="https://github.com/devfraga.png" />
+                                <AvatarFallback>DV</AvatarFallback>
+                            </Avatar>
+                            <div>
+                                <p className="text-sm font-semibold sm:text-base">
+                                    Sujeito Programador
+                                </p>
+                                <span className="text-[12px] text-gray-400 sm:text-sm">
+                                    teste@teste.com
+                                </span>
+                            </div>
+                        </article>
+                    ))}
+                </div>
             </CardContent>
         </Card>
     )
