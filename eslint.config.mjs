@@ -17,8 +17,8 @@ const eslintConfig = [
             tailwindcss,
         },
         rules: {
-            'tailwindcss/classnames-order': 'warn',
-            'tailwindcss/no-custom-classname': 'warn',
+            'tailwindcss/classnames-order': 'off',
+            'tailwindcss/no-custom-classname': 'off',
             'tailwindcss/no-arbitrary-value': 'warn',
         },
         settings: {
