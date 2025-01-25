@@ -1,5 +1,9 @@
+'use client'
+
 import { BadgeDollarSign, DollarSign, Percent, Users } from 'lucide-react'
+import { AreaChartVisitors } from './_components/areachart'
 import { ChartOverview } from './_components/chart'
+import { PieChartVisitors } from './_components/piechart'
 import { Sales } from './_components/sales'
 import {
     Card,
@@ -11,7 +15,7 @@ import {
 
 export default function Home() {
     return (
-        <main className="p-4 sm:ml-14">
+        <main className="overflow-hidden p-4 sm:ml-14">
             <section className="grid grid-cols-2 gap-4 lg:grid-cols-4">
                 <Card>
                     <CardHeader>
@@ -90,9 +94,14 @@ export default function Home() {
                 </Card>
             </section>
 
-            <section className="mt-4 flex max-h-96 flex-col gap-4 md:flex-row">
+            <section className="mt-4 flex flex-col gap-4 md:flex-row">
                 <ChartOverview />
                 <Sales />
+            </section>
+
+            <section className="mt-4 flex flex-col gap-4 md:flex-row">
+                <PieChartVisitors />
+                <AreaChartVisitors />
             </section>
         </main>
     )
